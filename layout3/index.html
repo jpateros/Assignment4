@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        h1 {
+            font-size: 2.75em;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px auto;
+            width: 960px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .title {
+            grid-column: span 2;
+            background-color: lightgray;
+            text-align: left;
+            min-height: 50px;
+            max-width: 225px;
+        }
+
+        .blog {
+            grid-column: span 2;
+            background-color: lightgray;
+            text-align: left;
+            min-height: 200px;
+        }
+
+        .product {
+            grid-column: span 1;
+            background-color: lightgray;
+            text-align: left;
+        }
+
+        .footer {
+            grid-column: span 4;
+            background-color: #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: lightgray;
+            padding: 20px;
+            margin-bottom: 20px;
+            min-height: 300px;
+            padding-top: 100px;
+        }
+
+        .header h1,
+        .header h2 {
+            margin: 0;
+        }
+
+        .header-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            background-color: #ccc;
+            text-align: left;
+            min-height: 80px;
+            max-width: 210px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #ccc;
+            height: 50px;
+            margin-top: 10px;
+            min-width: 480px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-container">
+        <header class="logo">Company Logo</header>
+        <nav class="nav">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+        </nav>
+    </div>
+    <div class="header">
+        <h1>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has, natum zril pro.</h1><br>
+        <h2>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus.
+            Qui an recteque maluisset assentior, cu ferri aperiam imperdiet sed.</h2>
+    </div>
+    <div class="container">
+        <div class="title">Title</div>
+        <div class="title">Title</div>
+        <div class="blog">Blog Post 1</div>
+        <div class="product">Featured Product 1</div>
+        <div class="product">Featured Product 2</div>
+        <div class="blog">Blog Post 2</div>
+        <div class="product">Featured Product 3</div>
+        <div class="product">Featured Product 4</div>
+        <div class="footer">Copyright Notice</div>
+    </div>
+</body>
+
+</html>
