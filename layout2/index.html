@@ -1,42 +1,103 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Grid Layout Example</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">Company Logo</div>   
+<html lang="en">
 
-            <div class="nav">
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                    <li>Item 4</li>
-                </ul>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x3 Grid Layout</title>
+    <style>
+        h1 {
+            font-size: 2.5em;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px auto;
+            width: 960px;
+        }
+
+        .container {
+            border: 1px solid #333;
+            padding: 10px;
+        }
+
+        .header-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            background-color: #ccc;
+            text-align: left;
+            min-height: 80px;
+            max-width: 210px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #ccc;
+            height: 50px;
+            margin-top: 10px;
+            min-width: 480px;
+            margin-left: auto;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            height: 500px;
+        }
+
+        .grid-item {
+            background-color: #ccc;
+            display: flex;
+        }
+
+        .footer {
+            grid-column: 1 / 4;
+            background-color: #ccc;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<div class="container">
+
+    <body>
+        <div class="header-container">
+            <header class="logo">Company Logo</header>
+            <nav class="nav">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+            </nav>
         </div>
-        <div class="main">
-            <p>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has, natum zril pro ei. Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an recteque maluisset assentior, cu ferri aperiam imperdiet   
- sed.</p>
-            <div class="grid-container">
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div   
- class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-            </div>
+        <div class="header">
+            <h1>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has, natum zril pro ei.</h1>
+            <h2>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus.
+                Qui an recteque maluisset assentior, cu ferri aperiam imperdiet sed.</h2>
         </div>
-        <div class="footer">
-            <p>Copyright   
- Notice</p>
+        <div class="grid-container">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
         </div>
-    </div>
-</body>
+        <footer class="footer">Copyright Notice</footer>
+    </body>
+</div>
+
 </html>
